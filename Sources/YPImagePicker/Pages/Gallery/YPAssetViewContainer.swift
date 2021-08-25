@@ -110,6 +110,12 @@ class YPAssetViewContainer: UIView {
     }
     
     public func refreshSquareCropButton() {
+        if isMultipleSelection {
+            squareCropButton.isHidden = true
+            zoomableView?.fitImage(true)
+            zoomableView?.layoutSubviews()
+            return
+        }
         if onlySquare {
             squareCropButton.isHidden = true
         } else {

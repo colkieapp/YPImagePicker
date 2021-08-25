@@ -161,8 +161,10 @@ public class YPLibraryVC: UIViewController, YPPermissionCheckable {
             if let self = self {
                 if !self.multipleSelectionEnabled {
                     self.selection.removeAll()
+                    self.v.assetViewContainer.onlySquare = false
                 }
                 self.showMultipleSelection()
+                self.v.assetViewContainer.squareCropButtonTapped()
             }
         }
     }
